@@ -20,9 +20,12 @@ const GiphyApp = () => {
   const [offset, setOffset] = useState(0);
   const [cachedImages, setCachedImages] = useState<Image[]>([]);
 
-  const API_KEY = "1bkG7ky5cmw5SLyvNfElcR1iYVzs38Zq";
+  // Giphy API key, should be in its own env file
+  const API_KEY = "1bkG7ky5cmw5SLyvNfElcR1iYVzs38Zq"; 
+  // Giphy API endpoint
   const API_URL = "https://api.giphy.com/v1/gifs/search";
 
+  // Function to fetch images from Giphy based on the search query and offset
   const handleSearch = async () => {
     try {
       const response = await axios.get(API_URL, {
@@ -43,8 +46,9 @@ const GiphyApp = () => {
     }
   };
 
+  // Call handleSearch whenever the offset changes
   useEffect(() => {
-    handleSearch(); // Call handleSearch whenever the offset changes
+    handleSearch();
   }, [offset]);
 
   const handleNext = () => {
