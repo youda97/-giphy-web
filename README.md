@@ -1,5 +1,6 @@
 # giphy-web
 Code challenge - Show 3 images from Giphy.com
+![2024-02-17 15_49_12-React App](https://github.com/youda97/-giphy-web/assets/25139161/e88c4669-a5d5-4942-a285-68172ec71f59)
 
 
 # Getting Started with Create React App
